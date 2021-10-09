@@ -66,6 +66,7 @@ file(GLOB MAIN_SRC
         "${PROJECT_SOURCE_DIR}/lib/SHTC3/*.c"
         "${PROJECT_SOURCE_DIR}/lib/MX25R1635/*.c"
         "${PROJECT_SOURCE_DIR}/lib/LIS2DH12/*.c"
+        "${PROJECT_SOURCE_DIR}/lib/LIS2MDL/*.c"
         "${PROJECT_SOURCE_DIR}/lib/BUZZER/*.c"
         )
 set(SOURCES
@@ -95,6 +96,7 @@ target_include_directories(${PROJECT_NAME}.elf
     ${PROJECT_SOURCE_DIR}/lib/SHTC3
     ${PROJECT_SOURCE_DIR}/lib/MX25R1635
     ${PROJECT_SOURCE_DIR}/lib/LIS2DH12
+    ${PROJECT_SOURCE_DIR}/lib/LIS2MDL
     ${PROJECT_SOURCE_DIR}/lib/BUZZER
     )
 target_link_libraries(${PROJECT_NAME}.elf

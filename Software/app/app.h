@@ -38,6 +38,7 @@
 #include "MX25R16.h"
 #include "LIS2DH12.h"
 #include "BUZZER.h"
+#include "lis2mdl_reg.h"
 
 /**
  * Application helpers

@@ -32,11 +32,29 @@ sensors_op_result_t sensors_init(void)
         return SENSORS_OP_FAIL;
     }
     GNSE_BSP_BM_Enable();
+
     if (SHTC3_probe() != SHTC3_STATUS_OK)
     {
         APP_PPRINTF("\r\n Failed to initialize SHTC3 sensor \r\n");
         return SENSORS_OP_FAIL;
     }
+    
+    // axis3bit16_t data_raw_acceleration;
+    // axis1bit16_t data_raw_temperature;
+    // float acceleration_mg[3];
+    // float temperature_degC;
+    uint8_t whoamI;
+    stmdev_ctx_t dev_ctx;
+    // uint8_t read_counter = 0;
+    // LIS2MDL_init(&dev_ctx);
+
+     /* Check LISMDL device ID */
+    lis2mdl_device_id_get(&dev_ctx, &whoamI);
+    if (whoamI != LIS2MDL_ID){
+        APP_PPRINTF("\r\n Failed to initialize SHTC3 sensor \r\n");
+        return SENSORS_OP_FAIL;
+    }
+
     APP_PPRINTF("\r\n Successfully intialized all sensors \r\n");
     return SENSORS_OP_SUCCESS;
 }
