@@ -7,3 +7,6 @@
 [submodule "Software/lib/threadx"]
 	path = Software/lib/threadx
 	url = https://github.com/azure-rtos/threadx
+[submodule "Software/lib/LIS2MDL"]
+	path = Software/lib/LIS2MDL
+	url = https://github.com/STMicroelectronics/lis2mdl
